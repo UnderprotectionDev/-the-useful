@@ -1,0 +1,15 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "src/routes/**/*.{ts,tsx}",
+    "src/**/*.test.{ts,tsx}",
+    "tests/integration/**/*.test.ts"
+  ],
+  "project": [
+    "src/**/*.{ts,tsx}",
+    "tests/**/*.{ts,tsx}",
+    "*.ts",
+    "src/**/*.css"
+  ],
+  "ignoreDependencies": ["shadcn"]
+}
