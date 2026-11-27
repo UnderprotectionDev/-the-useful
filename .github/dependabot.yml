@@ -1,0 +1,56 @@
+version: 2
+updates:
+  - package-ecosystem: bun
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      tanstack:
+        patterns: ["@tanstack/*"]
+      orpc:
+        patterns: ["@orpc/*"]
+      react-build:
+        patterns:
+          [
+            "react",
+            "react-dom",
+            "@types/react*",
+            "vite",
+            "@vitejs/*",
+            "nitro",
+            "@rolldown/*",
+            "@babel/*",
+            "babel-plugin-react-compiler",
+            "esbuild",
+          ]
+      ui:
+        patterns:
+          [
+            "@base-ui/*",
+            "shadcn",
+            "tailwindcss",
+            "@tailwindcss/*",
+            "tailwind-merge",
+            "class-variance-authority",
+            "clsx",
+            "lucide-react",
+          ]
+      quality:
+        patterns:
+          ["ultracite", "oxlint*", "oxfmt", "knip", "typescript", "@types/bun"]
+      testing:
+        patterns:
+          [
+            "@playwright/*",
+            "@axe-core/*",
+            "@testing-library/*",
+            "happy-dom",
+            "@happy-dom/*",
+          ]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
